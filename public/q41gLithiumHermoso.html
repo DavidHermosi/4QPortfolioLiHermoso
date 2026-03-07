@@ -10,7 +10,7 @@
     <h1>Graded 1: Movie Rating</h1>
     <div class="container">
         <form id="movieForm">
-        <div>
+        <div >
             <label for="movieTitle">Movie Title:</label>
             <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter movie title" required><br><br>
         </div>
@@ -28,7 +28,15 @@
                 <option value="Horror">Horror</option>
                 <option value="Sci-Fi">Sci-Fi</option>
                 <option value="Romance">Romance</option>
+                <option value="Documentary">Documentary</option>
             </select><br><br>
+            </div>
+            <div class="Rating" id="Rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
             </div>
             <button type="submit">Add Movie</button>
             
