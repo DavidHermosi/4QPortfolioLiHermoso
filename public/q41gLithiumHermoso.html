@@ -8,11 +8,38 @@
 </head>
 <body>
     <h1>Graded 1: Movie Rating</h1>
+    <div class="container">
+        <form id="movieForm">
+        <div>
+            <label for="movieTitle">Movie Title:</label>
+            <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter movie title" required><br><br>
+        </div>
+        <div>
+            <label for="movieYear">Year:</label>
+            <input type="number" id="movieYear" name="movieYear" placeholder="Enter release year" required><br><br>
+        </div>
+            <div>
+            <label for="movieGenre">Genre:</label>
+            <select id="movieGenre" name="movieGenre" required>
+                <option value="">Select genre</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Romance">Romance</option>
+            </select><br><br>
+            </div>
+            <button type="submit">Add Movie</button>
+            
+        </form>
+        
+    </div>
     
 
 
 
 </body>
 
-<script src="MR.jss"></script>
+<script src="MR.js"></script>
 </html>
