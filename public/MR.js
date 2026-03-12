@@ -49,8 +49,10 @@ function displayMovies() {
     li.innerHTML = `${movie.title} (${movie.year}) - ${movie.genre}, Rating: <span style="color: #f59e0b">${'★'.repeat(parseInt(movie.rating))}</span> <button class="delete-btn" data-title="${movie.title}">Delete</button>`;
    li.querySelector('.delete-btn').addEventListener('click', function() {
       const titleToDelete = this.getAttribute('data-title');
-      deleteMovie(titleToDelete);
-      displayMovies();
+      if (confirm(`Are you sure you want to delete "${titleToDelete}"?`)) {
+        deleteMovie(titleToDelete);
+        displayMovies();
+      }
     });
     movieList.appendChild(li);
   }
