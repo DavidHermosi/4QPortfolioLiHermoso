@@ -46,11 +46,22 @@ function displayMovies() {
   movieList.innerHTML = '';
     movies.forEach(movie => {
     const li = document.createElement('li');
-    li.innerHTML = `${movie.title} (${movie.year}) - ${movie.genre}, Rating: <span style="color: #f59e0b">${'★'.repeat(parseInt(movie.rating))}</span>`;
+    li.innerHTML = `${movie.title} (${movie.year}) - ${movie.genre}, Rating: <span style="color: #f59e0b">${'★'.repeat(parseInt(movie.rating))}</span> <button class="delete-btn" data-title="${movie.title}">Delete</button>`;
+   li.querySelector('.delete-btn').addEventListener('click', function() {
+      const titleToDelete = this.getAttribute('data-title');
+      deleteMovie(titleToDelete);
+      displayMovies();
+    });
     movieList.appendChild(li);
   }
 
     );
+}
+
+function deleteMovie(title) {
+  let movies = getMovies();
+  movies = movies.filter(movie => movie.title !== title);
+  localStorage.setItem('movies', JSON.stringify(movies));
 }
 
 document.getElementById('movieForm').addEventListener('submit', function(e) {
