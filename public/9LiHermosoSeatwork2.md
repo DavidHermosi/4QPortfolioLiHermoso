@@ -106,12 +106,12 @@ The notice appears on top of the content because it has a greater z-index, meani
 3. Please answer the following reflection questions (15 minutes)
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
-      Static: 
-      Relative:
-      Absolute:
+      Static: default position of elements, they are positioned according to the normal flow of the document
+      Relative: positioned relative to its normal position
+      Absolute: positioned relative to its nearest positioned ancestor
       Fixed: fixed position on screen.
     b. How does absolute positioning depend on its parent element?
-      Absoule positioning depends on the parent element to anchor its positioning on screen.
+      Absolute positioning depends on the parent element to anchor its positioning on screen.
     c. How do you differentiate sticky from fixed (you can research on sticky)?
       Fixed will always make the object in a fixed positon, while sticky initially behaves like a relative object, but when you scroll and meet a certain threshold,the object will be fixed to a certain position on screen.
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
