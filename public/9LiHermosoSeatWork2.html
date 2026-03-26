@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="<Cristobal, Hermoso>" />
+  <meta name="revised" content="<Mar. 26, 2026>" />
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .header, .footer {
+      background: lightblue;
+      padding: 10px;
+    }
+    .footer {
+       opacity: 0.5;
+       position: fixed;
+       bottom: 50px; 
+       width: 100%;
+    }
+    .sidebar {
+      background: lightgreen;
+      width: 150px;
+      height: 200px;
+      position: relative;
+      right: 20px;
+      top: 20px;
+
+    }
+    .content {
+      background: lightyellow;
+      width: 300px;
+      height: 200px;
+      position: absolute; top: 0px; right: 0px;
+      z-index: 1;
+    }
+    .notice {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: orange;
+    padding: 10px;
+    z-index: 2;
+}
+  </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+  <div class="footer">Footer</div>
+  <div class="notice">Notice!</div>
+</body>
+</html>

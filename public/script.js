@@ -23,4 +23,4 @@ function plotPoint() {
     else{
       out1.innerHTML = "divisa"
     }
-  
+}
